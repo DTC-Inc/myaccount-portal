@@ -1,7 +1,9 @@
 <div>
   <style>
+    /* Importing the 'Open Sans' font from Google Fonts */
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+    /* Headline styles for search titles */
     .portal .search-title {
       font-size: 2.5rem;
       font-weight: 500;
@@ -9,6 +11,7 @@
       margin-bottom: 40px;
     }
 
+    /* Rounded corners and transitions for buttons, search boxes, and card panels */
     .portal .dashbtn,
     .portal .searchbox,
     .details-group.card-panel {
@@ -16,15 +19,18 @@
       transition: ease 0.2s;
     }
 
+    /* Dash button base styling */
     .portal .dashbtn {
       border: none !important;
     }
 
+    /* Dash button hover effect with light purple background and no shadow */
     .portal .dashbtn:hover {
       background-color: #F3E8F3;
       box-shadow: unset;
     }
 
+    /* Page title headers and form group headers styling */
     .portal .page-title h1,
     .portal .details-form .details-group-header.title {
       font-family: 'Open Sans', sans-serif;
@@ -32,74 +38,84 @@
       font-weight: 200;
     }
 
+    /* H5 headers styling */
     h5 {
       color: #333333;
       font-family: 'Open Sans', sans-serif;
     }
 
+    /* Card panel shadow for depth effect */
     .details-group.card-panel {
       box-shadow: 0 4px 8px 0 rgba(24, 50, 71, 0.1);
     }
 
+    /* Ensures Open Sans font is used throughout modal and portal */
     .ReactModalPortal,
     body .portal {
       font-family: 'Open Sans', sans-serif;
     }
 
+    /* Height for search input box */
     .searchscreen .searchbox {
       height: 60px;
     }
 
+    /* Font size for text inside search input */
     .searchscreen .searchbox input[type="text"] {
       font-size: 16px !important;
     }
 
+    /* Placeholder text color inside search input */
     #searchscreen-searchbar::placeholder {
       color: #808080;
     }
 
+    /* Padding for kanban cards */
     .react-kanban-column .card {
       padding: 30px !important;
     }
 
+    /* Font size for headers inside kanban cards */
     .react-kanban-column .card h4 {
       font-size: 1.3rem !important;
     }
 
-    /* Highlight around searchbox */
+    /* Focus highlight around search box */
     .portal .searchbox:focus {
       border: 2px solid #F3E8F3;
       color: #222b37;
     }
 
-    /* Nav links */
+    /* Nav buttons - default transparent bottom border with transition */
     .portal .nhd-nav-rightAlign button {
       border-bottom: 5px solid transparent;
       transition: border-bottom ease 0.2s;
     }
 
+    /* Hover state for inactive nav buttons - highlights border in purple */
     .portal .nhd-nav-rightAlign button:not(.active):not(.highlight):hover {
       background-color: unset !important;
       border-bottom: 5px solid #8D198F;
     }
 
-    /* Cards */
+    /* Bottom padding for dashboard button section */
     .dashbuttons {
       padding-bottom: 50px !important;
     }
 
-    /* Hover states */
+    /* Disable bob animation effect */
     .hvr-bob:active,
     .hvr-bob:focus,
     .hvr-bob:hover {
       animation-name: none !important;
     }
 
-    /* Footer link hiding */
+    /* Hides a specific external link in the page footer */
     footer.page-footer .container .row div.center-align.col-lg-12 .row:last-child a[href="https://halopsa.com"] {
       display: none !important;
     }
   </style>
 
+  <!-- Placeholder paragraph with an ID -->
   <p id="isPasted"></p>
 </div>
