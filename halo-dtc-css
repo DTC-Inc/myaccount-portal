@@ -1,0 +1,105 @@
+<div>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+    .portal .search-title {
+      font-size: 2.5rem;
+      font-weight: 500;
+      font-family: 'Open Sans', sans-serif;
+      margin-bottom: 40px;
+    }
+
+    .portal .dashbtn,
+    .portal .searchbox,
+    .details-group.card-panel {
+      border-radius: 20px;
+      transition: ease 0.2s;
+    }
+
+    .portal .dashbtn {
+      border: none !important;
+    }
+
+    .portal .dashbtn:hover {
+      background-color: #F3E8F3;
+      box-shadow: unset;
+    }
+
+    .portal .page-title h1,
+    .portal .details-form .details-group-header.title {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 200;
+    }
+
+    h5 {
+      color: #333333;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .details-group.card-panel {
+      box-shadow: 0 4px 8px 0 rgba(24, 50, 71, 0.1);
+    }
+
+    .ReactModalPortal,
+    body .portal {
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .searchscreen .searchbox {
+      height: 60px;
+    }
+
+    .searchscreen .searchbox input[type="text"] {
+      font-size: 16px !important;
+    }
+
+    #searchscreen-searchbar::placeholder {
+      color: #808080;
+    }
+
+    .react-kanban-column .card {
+      padding: 30px !important;
+    }
+
+    .react-kanban-column .card h4 {
+      font-size: 1.3rem !important;
+    }
+
+    /* Highlight around searchbox */
+    .portal .searchbox:focus {
+      border: 2px solid #F3E8F3;
+      color: #222b37;
+    }
+
+    /* Nav links */
+    .portal .nhd-nav-rightAlign button {
+      border-bottom: 5px solid transparent;
+      transition: border-bottom ease 0.2s;
+    }
+
+    .portal .nhd-nav-rightAlign button:not(.active):not(.highlight):hover {
+      background-color: unset !important;
+      border-bottom: 5px solid #8D198F;
+    }
+
+    /* Cards */
+    .dashbuttons {
+      padding-bottom: 50px !important;
+    }
+
+    /* Hover states */
+    .hvr-bob:active,
+    .hvr-bob:focus,
+    .hvr-bob:hover {
+      animation-name: none !important;
+    }
+
+    /* Footer link hiding */
+    footer.page-footer .container .row div.center-align.col-lg-12 .row:last-child a[href="https://halopsa.com"] {
+      display: none !important;
+    }
+  </style>
+
+  <p id="isPasted"></p>
+</div>
