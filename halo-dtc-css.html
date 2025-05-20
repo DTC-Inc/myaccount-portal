@@ -1,7 +1,30 @@
 <div>
   <style>
+    /* Define a softer color palette */
+    :root {
+      --theme-page-background: #f4f8f7; /* Very light, slightly teal-tinted grey */
+      --theme-card-background: #FFFFFF; /* White for cards and distinct elements */
+      --theme-accent-color: #20C0C0;    /* The main teal from the image, used as accent */
+      --theme-accent-hover-color: #1BAAAA; /* Darker teal for hovers on accent elements */
+      --theme-text-dark: #333333;       /* For light backgrounds */
+      --theme-text-light: #FFFFFF;      /* For dark/accent backgrounds */
+      --theme-text-muted: #5f6368;      /* Muted text color */
+      --theme-border-color: #d0dada;    /* Light border for elements */
+    }
+
     /* Importing the 'Open Sans' font from Google Fonts */
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+    /* Base style for the portal area */
+    body .portal {
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--theme-page-background);
+      /* The teal pattern background might be too busy with a light page background. */
+      /* Consider removing or using a very subtle version if you uncomment this. */
+      /* background-image: url('YOUR_IMAGE_URL_HERE.png'); */
+      /* background-repeat: repeat; */
+      color: var(--theme-text-dark); /* Default text color for the portal */
+    }
 
     /* Headline styles for search titles */
     .portal .search-title {
@@ -9,6 +32,7 @@
       font-weight: 500;
       font-family: 'Open Sans', sans-serif;
       margin-bottom: 40px;
+      color: var(--theme-accent-color); /* Teal accent for title */
     }
 
     /* Rounded corners and transitions for buttons, search boxes, and card panels */
@@ -19,14 +43,17 @@
       transition: ease 0.2s;
     }
 
-    /* Dash button base styling */
+    /* Dash button styling */
     .portal .dashbtn {
-      border: none !important;
+      border: 1px solid var(--theme-accent-color); 
+      background-color: var(--theme-card-background); 
+      color: var(--theme-accent-color); 
     }
 
-    /* Dash button hover effect with light purple background and no shadow */
+    /* Dash button hover effect */
     .portal .dashbtn:hover {
-      background-color: #F3E8F3;
+      background-color: var(--theme-accent-hover-color); 
+      color: var(--theme-text-light); 
       box-shadow: unset;
     }
 
@@ -36,25 +63,34 @@
       font-family: 'Open Sans', sans-serif;
       font-size: 1.5rem;
       font-weight: 200;
+      color: var(--theme-accent-color); /* Teal accent */
     }
 
     /* H5 headers styling */
     h5 {
-      color: #333333;
+      color: var(--theme-accent-color); /* Teal accent */
       font-family: 'Open Sans', sans-serif;
     }
 
-    /* Card panel shadow for depth effect */
+    /* Card panel styling */
     .details-group.card-panel {
-      box-shadow: 0 4px 8px 0 rgba(24, 50, 71, 0.1);
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.07); /* Softer shadow */
+      background-color: var(--theme-card-background); 
+      color: var(--theme-text-dark); 
     }
 
-    /* Ensures Open Sans font is used throughout modal and portal */
-    .ReactModalPortal,
-    body .portal {
+    /* Ensures Open Sans font is used throughout modal */
+    .ReactModalPortal {
       font-family: 'Open Sans', sans-serif;
     }
 
+    /* Search box styling */
+    .portal .searchbox {
+      background-color: var(--theme-card-background); 
+      border: 1px solid var(--theme-border-color); 
+      color: var(--theme-text-dark); 
+    }
+    
     /* Height for search input box */
     .searchscreen .searchbox {
       height: 60px;
@@ -63,39 +99,55 @@
     /* Font size for text inside search input */
     .searchscreen .searchbox input[type="text"] {
       font-size: 16px !important;
+      color: var(--theme-text-dark); 
     }
 
     /* Placeholder text color inside search input */
     #searchscreen-searchbar::placeholder {
-      color: #808080;
+      color: var(--theme-text-muted); /* Muted placeholder */
+    }
+    
+    /* Focus highlight around search box */
+    .portal .searchbox:focus {
+      border: 2px solid var(--theme-accent-color); 
+      color: var(--theme-text-dark);
     }
 
-    /* Padding for kanban cards */
+    /* Kanban card styling */
     .react-kanban-column .card {
       padding: 30px !important;
+      background-color: var(--theme-card-background); 
+      color: var(--theme-text-dark); 
+      border-radius: 10px; 
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06); /* Subtle shadow for cards */
     }
 
     /* Font size for headers inside kanban cards */
     .react-kanban-column .card h4 {
       font-size: 1.3rem !important;
+      color: var(--theme-accent-color); 
     }
 
-    /* Focus highlight around search box */
-    .portal .searchbox:focus {
-      border: 2px solid #F3E8F3;
-      color: #222b37;
-    }
-
-    /* Nav buttons - default transparent bottom border with transition */
+    /* Nav buttons */
     .portal .nhd-nav-rightAlign button {
       border-bottom: 5px solid transparent;
       transition: border-bottom ease 0.2s;
+      color: var(--theme-text-muted); /* Muted text for nav buttons */
+      background-color: transparent;
     }
 
-    /* Hover state for inactive nav buttons - highlights border in purple */
+    /* Hover state for inactive nav buttons */
     .portal .nhd-nav-rightAlign button:not(.active):not(.highlight):hover {
       background-color: unset !important;
-      border-bottom: 5px solid #8D198F;
+      border-bottom: 5px solid var(--theme-accent-color); 
+      color: var(--theme-accent-color);
+    }
+    
+    /* Active nav button styling */
+    .portal .nhd-nav-rightAlign button.active {
+        border-bottom: 5px solid var(--theme-accent-color);
+        color: var(--theme-accent-color);
+        font-weight: bold; 
     }
 
     /* Bottom padding for dashboard button section */
